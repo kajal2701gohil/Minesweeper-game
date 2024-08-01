@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+    <header>
+        <h2>Minesweeper Game</h2>
+        <button class="btn" onclick="startGame(9,9,10)">Beginner</button>
+        <button class="btn" onclick="startGame(16,16,40)">Intermediate</button>
+        <button class="btn" onclick="startGame(16,30,99)">Expert</button>
+        <button class="btn" onclick="customGame(15,35,99)" id="custom">Custom</button>
+    </header>
+    <main>
+        <div class="customDiv">
+            <span>Row</span><input type="number" value="15" id="row" min="1" max="100">
+            <span>Column</span><input type="number" value="35" id="col" min="1" max="100">
+            <span>Mines</span><input type="number" value="99" id="bomb" min="1" max="100">
+            <button class="btn" onclick="getCustom()">Update</button>
+        </div>
+        <div id="game"></div>
+        <div class="div">
+            <button class="btn info"></button>
+            <h2 id="winner"></h2>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
